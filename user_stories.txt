@@ -1,5 +1,3 @@
-# bookmark_manager
-
 As a user
 So that I can see webpages that I like
 I want to be able to see a list of my links
