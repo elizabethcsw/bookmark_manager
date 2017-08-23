@@ -4,6 +4,7 @@ ruby '2.4.1'
 
 gem 'rake'
 gem 'sinatra'
+gem 'data_mapper'
 
 group :test do
   gem 'capybara'
@@ -13,7 +14,6 @@ group :test do
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
   gem 'flog'
-  gem 'data_mapper'
   gem 'dm-postgres-adapter'
   gem 'database_cleaner'
   gem 'rerun'
