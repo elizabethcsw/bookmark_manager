@@ -17,4 +17,5 @@ group :test do
   gem 'dm-postgres-adapter'
   gem 'database_cleaner'
   gem 'rerun'
+  gem 'pg'
 end
