@@ -7,6 +7,7 @@ gem 'sinatra'
 gem 'data_mapper'
 gem 'pg'
 gem 'dm-postgres-adapter'
+gem 'database_cleaner'
 
 group :test do
   gem 'capybara'
@@ -16,6 +17,5 @@ group :test do
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
   gem 'flog'
-  gem 'database_cleaner'
   gem 'rerun'
 end
