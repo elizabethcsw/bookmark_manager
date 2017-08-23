@@ -5,6 +5,8 @@ ruby '2.4.1'
 gem 'rake'
 gem 'sinatra'
 gem 'data_mapper'
+gem 'pg'
+gem 'dm-postgres-adapter'
 
 group :test do
   gem 'capybara'
@@ -14,8 +16,6 @@ group :test do
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
   gem 'flog'
-  gem 'dm-postgres-adapter'
   gem 'database_cleaner'
   gem 'rerun'
-  gem 'pg'
 end
