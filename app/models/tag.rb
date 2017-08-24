@@ -7,7 +7,7 @@ class Tag
   property :name, String
 
   # has n, :taggings
-  # has n, :links, :through => Resource
+  has n, :links, through: Resource
 end
 
 # class Tagging

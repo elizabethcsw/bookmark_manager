@@ -1,0 +1,11 @@
+<h1>Tags</h1>
+
+<ul id='bubbles'>
+  <% @links.select do |link| %>
+    <li>
+      Title: <%=link.title%>
+      URL: <%=link.url%>
+      Tags: <%=link.tags.map(&:name)%>
+    </li>
+    <%end%>
+</ul>

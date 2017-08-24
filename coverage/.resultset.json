@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/elizabethchan/Desktop/Makers Academy/week4/bookmark_manager/spec/features/create_links_feature_spec.rb": [
+      "/Users/rolando/Makers/bookmark_manager_elizabeth/spec/features/create_links_feature_spec.rb": [
         1,
         1,
         1,
@@ -27,7 +27,7 @@
         null,
         null
       ],
-      "/Users/elizabethchan/Desktop/Makers Academy/week4/bookmark_manager/spec/features/tag_links_feature_spec.rb": [
+      "/Users/rolando/Makers/bookmark_manager_elizabeth/spec/features/links_bubbles_feature_test_spec.rb": [
         1,
         1,
         1,
@@ -36,23 +36,40 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
+        0,
+        0,
+        0,
         null,
         null,
         null,
         null
       ],
-      "/Users/elizabethchan/Desktop/Makers Academy/week4/bookmark_manager/spec/features/view_links_feature_spec.rb": [
+      "/Users/rolando/Makers/bookmark_manager_elizabeth/spec/features/tag_links_feature_spec.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/rolando/Makers/bookmark_manager_elizabeth/spec/features/view_links_feature_spec.rb": [
         1,
         1,
         1,
@@ -74,6 +91,6 @@
         null
       ]
     },
-    "timestamp": 1503587614
+    "timestamp": 1503591701
   }
 }

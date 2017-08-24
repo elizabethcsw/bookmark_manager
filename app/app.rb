@@ -1,10 +1,14 @@
 require 'sinatra/base'
 require_relative 'models/link'
+require_relative 'models/tag'
 require_relative 'data_mapper_setup'
 
 ENV['RACK_ENV'] ||= 'development'
 
 class BookmarkManager < Sinatra::Base
+
+  enable :sessions
+
   get '/links' do
     @links = Link.all
     #@links is an array of instance variables from the class Link
@@ -28,6 +32,23 @@ class BookmarkManager < Sinatra::Base
     p link.save
     p link
     redirect '/links'
+  end
+
+  post '/links/tag' do
+    session[:name] = params[:name]
+    tag = Tag.first(name: session[:name])
+    p @links.class
+    p tag
+    @links = tag ? tag.links : []
+    @links
+
+    erb :'links/bubbles'
+  end
+
+  get '/links/:name' do
+    tag = Tag.first(name: params[:name])
+    @links = tag ? tag.links : []
+     erb :'links/bubbles'
   end
 
   run! if app_file == $0

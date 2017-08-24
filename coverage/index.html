@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>Code coverage for Bookmark manager</title>
+    <title>Code coverage for Bookmark manager elizabeth</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-08-24T16:13:34+01:00">2017-08-24T16:13:34+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-08-24T17:21:41+01:00">2017-08-24T17:21:41+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">93.75%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="red">
+         0.94
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>3</b> files in total.
-    <b>38</b> relevant lines. 
-    <span class="green"><b>38</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>4</b> files in total.
+    <b>48</b> relevant lines. 
+    <span class="green"><b>45</b> lines covered</span> and
+    <span class="red"><b>3</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,7 +51,7 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#cb8bb58be42633b5dd6d7e4a10f9a40636a7fcdc" class="src_link" title="spec/features/create_links_feature_spec.rb">spec/features/create_links_feature_spec.rb</a></td>
+        <td class="strong"><a href="#90df05ff8da378af86a7fbb5ec332781befcd170" class="src_link" title="spec/features/create_links_feature_spec.rb">spec/features/create_links_feature_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>24</td>
         <td>13</td>
@@ -61,7 +61,17 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#e0e3a28ed26ac6fca214c7a054f78f0a036a690e" class="src_link" title="spec/features/tag_links_feature_spec.rb">spec/features/tag_links_feature_spec.rb</a></td>
+        <td class="strong"><a href="#8e8be14e5d56fa6ab8e0e88002e12009ce16ca8d" class="src_link" title="spec/features/links_bubbles_feature_test_spec.rb">spec/features/links_bubbles_feature_test_spec.rb</a></td>
+        <td class="red strong">70.0 %</td>
+        <td>15</td>
+        <td>10</td>
+        <td>7</td>
+        <td>3</td>
+        <td>0.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#634201b4aac99738d454a68d043a408342e15f61" class="src_link" title="spec/features/tag_links_feature_spec.rb">spec/features/tag_links_feature_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>23</td>
         <td>15</td>
@@ -71,7 +81,7 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#e90a6d101072ded50776f0e19d572cc543015230" class="src_link" title="spec/features/view_links_feature_spec.rb">spec/features/view_links_feature_spec.rb</a></td>
+        <td class="strong"><a href="#7633efd38fe4728005d0473824df339fbb0de700" class="src_link" title="spec/features/view_links_feature_spec.rb">spec/features/view_links_feature_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>19</td>
         <td>10</td>
@@ -96,7 +106,7 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="cb8bb58be42633b5dd6d7e4a10f9a40636a7fcdc">
+        <div class="source_table" id="90df05ff8da378af86a7fbb5ec332781befcd170">
   <div class="header">
     <h3>spec/features/create_links_feature_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -259,7 +269,116 @@
 </div>
 
       
-        <div class="source_table" id="e0e3a28ed26ac6fca214c7a054f78f0a036a690e">
+        <div class="source_table" id="8e8be14e5d56fa6ab8e0e88002e12009ce16ca8d">
+  <div class="header">
+    <h3>spec/features/links_bubbles_feature_test_spec.rb</h3>
+    <h4><span class="red">70.0 %</span> covered</h4>
+    <div>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;spec_helper&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &#39;../../app/models/link.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &#39;../../app/app.rb&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.feature &quot;Visiting /links/bubbles&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scenario &quot;Checking if links tagged with bubbles are present&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &#39;/links/bubbles&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in(&#39;tags&#39;, :with =&gt; &#39;bubbles&#39;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    expect(page.status_code).to eq 200</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">    within &#39;ul#links&#39; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">      expect(page).to have_content(&quot;bubbles&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="634201b4aac99738d454a68d043a408342e15f61">
   <div class="header">
     <h3>spec/features/tag_links_feature_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -375,16 +494,16 @@
           <code class="ruby">      link = Link.first</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby">    # expect(link.tags.map(&amp;:name)).to include(&#39;any_tag&#39;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_content(&quot;any_tag&quot;)</code>
+          <code class="ruby">    expect(link.tags.map(&amp;:name)).to include(&#39;any_tag&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">      # expect(page).to have_content(&quot;any_tag&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
@@ -416,7 +535,7 @@
 </div>
 
       
-        <div class="source_table" id="e90a6d101072ded50776f0e19d572cc543015230">
+        <div class="source_table" id="7633efd38fe4728005d0473824df339fbb0de700">
   <div class="header">
     <h3>spec/features/view_links_feature_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
