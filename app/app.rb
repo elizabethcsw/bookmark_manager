@@ -6,10 +6,12 @@ ENV['RACK_ENV'] ||= 'development'
 class BookmarkManager < Sinatra::Base
   get '/links' do
     @links = Link.all
+    #@links is an array of instance variables from the class Link
+    p @links
     erb :'links/index'
   end
 
-  post '/links/new' do
+  get '/links/new' do
     erb :'links/save'
   end
 
