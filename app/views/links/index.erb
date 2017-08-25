@@ -5,7 +5,7 @@
     <li>
       Title: <%=link.title%>
       URL: <%=link.url%>
-      Tags: <%=link.tags.map(&:name)%>
+      Tags: <%=link.tags.map(&:name).join(", ")%>
     </li>
     <%end%>
 </ul>
@@ -21,6 +21,6 @@
 </form> -->
 
 <form action='/links/tag' method='post'>
-  <h3>Search tag:<input type='text' name="name"></h3>
-  <input type='submit' value='search'>
+  <h3>Search tag: <input type='text' name="name"></h3>
+  <input type='submit' value='Search'>
 </form>

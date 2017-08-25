@@ -1,5 +1,6 @@
 require 'spec_helper'
 require_relative '../../app/models/link.rb'
+require_relative '../../app/models/tag.rb'
 require_relative '../../app/app.rb'
 
 RSpec.feature "tagging links" do

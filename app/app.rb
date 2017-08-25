@@ -1,9 +1,12 @@
+ENV['RACK_ENV'] ||= 'development'
+
+
 require 'sinatra/base'
 require_relative 'models/link'
 require_relative 'models/tag'
 require_relative 'data_mapper_setup'
 
-ENV['RACK_ENV'] ||= 'development'
+
 
 class BookmarkManager < Sinatra::Base
 
@@ -24,23 +27,34 @@ class BookmarkManager < Sinatra::Base
     p @title = params[:title]
     p @url = params[:url]
     p @tag_name = params[:tags]
-    p link = Link.new(url: @url, title: @title)
-    p tag = Tag.first_or_create(name: @tag_name)
-    p link.tags << tag
-    p link.tags.map(&:name)
-    p link.tags.name
+
+    link = Link.new(url: @url, title: @title)
+
+    params[:tags].split(" ").each do
+      |x| link.tags << Tag.first_or_create(name: x)
+    end
+
+    # tag = Tag.first_or_create(name: @tag_name)
+    # link.tags << tag
+    # p link.tags.map(&:name)
+    # p link.tags.name
     p link.save
-    p link
+    # p link
     redirect '/links'
   end
 
   post '/links/tag' do
     session[:name] = params[:name]
     tag = Tag.first(name: session[:name])
-    p @links.class
+    # p "this is tag.links"
+    # p tag.links
+    # @links is empty before ternary
+    tag ? (@links = tag.links) : (@links = [])
+    # @links = tag.links after ternary if tag is true
+    # @links = [] after ternary if tag is nil
+    # tag.links will return an error if tag is nil
+    p "this is tag"
     p tag
-    @links = tag ? tag.links : []
-    @links
 
     erb :'links/bubbles'
   end
@@ -48,6 +62,10 @@ class BookmarkManager < Sinatra::Base
   get '/links/:name' do
     tag = Tag.first(name: params[:name])
     @links = tag ? tag.links : []
+    # p "this is @links"
+    # p @links
+    # p "this is tag.links"
+    # p tag.links
      erb :'links/bubbles'
   end
 

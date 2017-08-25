@@ -6,8 +6,8 @@ class Link
   has n, :tags, through: Resource
 
   property :id, Serial
-  property :title, String
-  property :url, String
+  property :title, String, required: true
+  property :url, String, required: true, format: :url
 
   # has n, :taggings
 
