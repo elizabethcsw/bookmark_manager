@@ -6,6 +6,8 @@ RSpec.feature "Visiting /links/tags" do
   scenario "Checking if multiple tags can be tagged to a link" do
     visit '/links'
     click_button("Save a new link")
+    fill_in('title', :with => 'first_title')
+    fill_in('url', :with => 'http://www.makersacademy.com')
     fill_in('tags', :with => 'bubbles orange')
     click_button("Save")
     expect(page.status_code).to eq 200

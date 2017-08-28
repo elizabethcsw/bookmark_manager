@@ -8,7 +8,7 @@ RSpec.feature "tagging links" do
     visit '/links'
     click_button("Save a new link")
     fill_in('title', :with => 'first_title')
-    fill_in('url', :with => 'any_url')
+    fill_in('url', :with => 'http://www.google.com')
     fill_in('tags', :with => 'any_tag')
     click_button("Save")
 

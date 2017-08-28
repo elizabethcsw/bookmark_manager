@@ -7,7 +7,7 @@ RSpec.feature "creating links" do
     visit '/links'
     click_button("Save a new link")
     fill_in('title', :with => 'first_title')
-    fill_in('url', :with => 'any_url')
+    fill_in('url', :with => 'http://www.makersacademy.com')
     click_button("Save")
     # Link.create(url: 'http://www.makersacademy.com', title: "Makers")
     # visit '/links/new'
