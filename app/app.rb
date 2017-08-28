@@ -86,17 +86,18 @@ class BookmarkManager < Sinatra::Base
     p @user = User.new(email: @email, password: @password, password_confirmation: @password2)
     # @user.id will return nil until we execute @user.save
     if @user.save
-      #save returns true/false depending on whether the model is successfully saved to the database.
+      #@user.save returns true/false depending on whether the model is successfully saved to the database.
       p session[:user_id] = @user.id
       redirect '/links'
     else
       p "cannot execute @user.save"
-      flash.now[:notice] = "Password and confirmation password do not match"
+      flash.now[:errors] = @user.errors.full_messages
+      # flash.now[:notice] = "Password and confirmation password do not match"
       erb :'links/signup'
     end
   end
 
-#introducing memoization
+#introducing memorization
 #storing the result of User.get using conditional assignment to an instance variable
 # It’s important to notice that the result of get is assigned to an instance variable instead of a local variable. If you were to use a local variable (a variable without the @ symbol) then user wouldn’t be stored and the get query would occur on every call to current_user. Nothing would have improved.
   helpers do

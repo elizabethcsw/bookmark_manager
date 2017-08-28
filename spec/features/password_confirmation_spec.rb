@@ -7,7 +7,7 @@ RSpec.feature 'Password confirmation' do
     expect{ sign_up(password2: 'wrong') }.to_not change(User, :count)
     # expect{false_sign_up}.not_to change(User, :count)
     expect(current_path).to eq('/users') # current_path is a helper provided by Capybara
-    expect(page).to have_content 'Password and confirmation password do not match'
+    expect(page).to have_content 'Password does not match the confirmation'
   end
 
 end

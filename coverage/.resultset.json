@@ -85,11 +85,11 @@
         null,
         null,
         1,
-        4,
-        4,
-        4,
-        4,
-        4,
+        6,
+        6,
+        6,
+        6,
+        6,
         null
       ],
       "/Users/elizabethchan/Desktop/Makers Academy/week4/bookmark_manager/spec/features/tag_links_feature_spec.rb": [
@@ -133,10 +133,20 @@
         null,
         1,
         2,
+        1,
+        1,
         null,
         null,
         1,
         2,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        2,
+        1,
         null,
         null
       ],
@@ -162,6 +172,6 @@
         null
       ]
     },
-    "timestamp": 1503951126
+    "timestamp": 1503952371
   }
 }
